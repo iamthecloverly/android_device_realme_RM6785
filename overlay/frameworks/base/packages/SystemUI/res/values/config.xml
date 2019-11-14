@@ -16,6 +16,10 @@
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
 
+    <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
+     vibrator is capable of subtle vibrations -->
+    <bool name="config_vibrateOnIconAnimation">true</bool>
+
     <!-- If true, recorder will use AVCLevel42 for encoding-->
     <bool name="config_screenrecord_codec_profile_avc42">true</bool>
 </resources>
