@@ -38,8 +38,8 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service-mediatek \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@6.0-impl:32 \
+    android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -56,13 +56,13 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor
+    android.hardware.bluetooth@1.0.vendor:64
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.common@1.0.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor
+    android.hardware.camera.common@1.0.vendor:64 \
+    android.hardware.camera.device@3.6.vendor:64 \
+    android.hardware.camera.provider@2.6.vendor:64
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.3.vendor:32 \
     libdrm.vendor \
     libmockdrmcryptoplugin
 
@@ -93,12 +93,12 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor:64
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -111,6 +111,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder.vendor
@@ -158,7 +159,7 @@ PRODUCT_PACKAGES += \
 
 # Neutral Networks
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
+    android.hardware.neuralnetworks@1.3.vendor:64
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -230,9 +231,9 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-mediatek \
-    android.hardware.power-V1-ndk_platform.vendor \
-    android.hardware.power@1.3.vendor
+    android.hardware.power-service-mediatek:64 \
+    android.hardware.power-V1-ndk_platform.vendor:64 \
+    android.hardware.power@1.3.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
@@ -243,9 +244,9 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio@1.5.vendor:64 \
+    android.hardware.radio.config@1.2.vendor:64 \
+    android.hardware.radio.deprecated@1.0.vendor:64
 
 # RcsService
 PRODUCT_PACKAGES += \
@@ -259,11 +260,11 @@ PRODUCT_PACKAGES += \
 
 # Secure element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor
+    android.hardware.secure_element@1.2.vendor:64
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0.vendor \
+    android.hardware.sensors@2.0.vendor:64 \
     libsensorndkbridge
 
 # Soong namespaces
@@ -272,7 +273,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Soundtrigger
 PRODUCT_PACKAGES += \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl:32
 
 # Telephony
 PRODUCT_BOOT_JARS += \
@@ -286,12 +287,12 @@ PRODUCT_BOOT_JARS += \
 
 # Textclassifier
 PRODUCT_PACKAGES += \
-    libtextclassifier_hash.vendor
+    libtextclassifier_hash.vendor:64
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@2.0.vendor
+    android.hardware.thermal@1.0-impl:64 \
+    android.hardware.thermal@2.0.vendor:64
 
 # Touch
 PRODUCT_PACKAGES += \
@@ -303,8 +304,8 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.1.vendor \
-    android.hardware.usb.gadget@1.1.vendor
+    android.hardware.usb@1.1.vendor:64 \
+    android.hardware.usb.gadget@1.1.vendor:64
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -322,6 +323,6 @@ PRODUCT_PACKAGES += \
     WifiOverlayRM6785 \
     hostapd \
     android.hardware.wifi@1.0-service.RM6785 \
-    android.hardware.wifi.supplicant@1.3.vendor \
+    android.hardware.wifi.supplicant@1.3.vendor:64 \
     libkeystore-engine-wifi-hidl:64 \
-    libkeystore-wifi-hidl
+    libkeystore-wifi-hidl:64
