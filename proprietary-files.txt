@@ -2301,7 +2301,7 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
 # Power - from RMX2151_11_F.01
--vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service|847a9cf9e97e7c120a208e78ce0aad4954dba42e
+-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service|c6ea88e929d3f31a779144cb2bc0d7fa4142cf4c
 vendor/etc/fstb.cfg|a77b3cec06ec249ee9df95dbc5979662fe90d996
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc|38abe003339d1fbdaa84ce52f39cfc6b009bf098
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc|1a7c82fde63ddf0815938f554550a05edb473f39
