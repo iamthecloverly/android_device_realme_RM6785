@@ -1,0 +1,2 @@
+# libinit
+allow init proc_oppo_operator:file r_file_perms;

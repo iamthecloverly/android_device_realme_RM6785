@@ -1,0 +1,10 @@
+type init_RM6785, domain;
+type init_RM6785_exec, vendor_file_type, exec_type, file_type;
+
+init_daemon_domain(init_RM6785)
+
+set_prop(init_RM6785, vendor_nfc_prop)
+set_prop(init_RM6785, vendor_power_profile_prop)
+
+allow init_RM6785 proc_nfc_chipset:file r_file_perms;
+allow init_RM6785 proc_oppo_operator:file r_file_perms;

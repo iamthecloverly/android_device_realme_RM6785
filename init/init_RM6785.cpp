@@ -13,7 +13,6 @@
 
 #include "vendor_init.h"
 
-#define PROC_NFC "/proc/oppo_nfc/chipset"
 #define PROC_OPERATOR "/proc/oppoVersion/operatorName"
 
 void property_override(std::string prop, std::string value, bool add = true) {
@@ -51,18 +50,6 @@ void set_ro_build_prop(const std::string &prop, const std::string &value,
 
         property_override(prop_name, value, false);
     }
-}
-
-bool nfc_variant() {
-    std::ifstream nfc_file(PROC_NFC);
-    nfc_file.good();
-    std::string chipset;
-
-    getline(nfc_file, chipset);
-
-    LOG(INFO) << "oppo_nfc : chipset " << chipset;
-
-    return (chipset != "NULL");
 }
 
 std::tuple<std::string, std::string> get_device() {
@@ -144,18 +131,5 @@ void vendor_load_properties() {
     set_ro_build_prop("model", model);
     set_ro_build_prop("name", model);
     set_ro_build_prop("product", model, false);
-
-    // for RRO
-    if (!device.find("RMX215")) {
-        property_override("ro.device", "RMX2151");
-    }
-    if (!device.find("RMX216")) {
-        property_override("ro.device", "RMX2161");
-    }
-
-    // NFC check
-    if (nfc_variant()) {
-        property_override("ro.boot.product.hardware.sku", "nfc");
-    }
 #endif
 }

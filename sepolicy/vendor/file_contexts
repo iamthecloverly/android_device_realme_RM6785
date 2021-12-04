@@ -19,3 +19,6 @@
 
 # Goodix Fingerprint data
 /data/vendor/fingerprint/gf_data(/.*)?     u:object_r:fingerprint_vendor_data_file:s0
+
+# Init services
+/(vendor|system/vendor)/bin/init_RM6785_vendor   u:object_r:init_RM6785_exec:s0

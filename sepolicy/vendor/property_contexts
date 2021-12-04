@@ -5,3 +5,9 @@ persist.vendor.audio.tuning.def_path        u:object_r:vendor_audio_tunning_prop
 # Fingerprint
 persist.vendor.fingerprint.                 u:object_r:vendor_fingerprint_prop:s0
 vendor.fingerprint.                         u:object_r:vendor_fingerprint_prop:s0
+
+# NFC device
+ro.vendor.nfc_device                        u:object_r:vendor_nfc_prop:s0
+
+# Power profile
+ro.vendor.power_profile.device              u:object_r:vendor_power_profile_prop:s0

@@ -45,6 +45,9 @@ service vendor.media.omx /vendor/bin/hw/android.hardware.media.omx@1.0-service
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks
 
+on property:ro.vendor.nfc_device=1
+    setprop ro.boot.product.hardware.sku nfc
+
 on property:ro.boot.product.hardware.sku=nfc
     start vendor.nfc_hal_service
 

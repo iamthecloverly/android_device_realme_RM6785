@@ -1,0 +1,2 @@
+# Proc
+genfscon proc /oppoVersion/operatorName                                   u:object_r:proc_oppo_operator:s0
