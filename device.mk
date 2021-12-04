@@ -121,6 +121,9 @@ PRODUCT_PACKAGES += \
     init.RM6785.rc \
     ueventd.mtk.rc
 
+PRODUCT_PACKAGES += \
+    init_RM6785_vendor
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
