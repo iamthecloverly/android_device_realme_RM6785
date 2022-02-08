@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service-mediatek \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
-    audio.a2dp.default \
     audio_policy.stub \
     audio.r_submix.default \
     audio.usb.default \
