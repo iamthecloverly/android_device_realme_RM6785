@@ -3,14 +3,7 @@
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6785.usb.rc
 import /vendor/etc/init/hw/init.project.rc
-import /system_ext/etc/init/hw/init.aee.rc
-import /FWUpgradeInit.rc
-import /vendor/etc/init/hw/init.aee.rc
-import /vendor/etc/init/hw/init.volte.rc
-import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
-import /vendor/etc/init/hw/init.stnfc.rc
-import /system/etc/init/hw/init.stnfc.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc
@@ -91,14 +84,6 @@ on charger
 
     start vendor.light-default
 
-#ifdef VENDOR_EDIT
-#huacai.zhou@bsp.drv modify for setting zram size according to totalram size
-service swap_enable_init /vendor/bin/sh /vendor/bin/swap_enable.sh
-     user root
-     disabled
-     oneshot
-#endif
-
 on fs
     write /proc/bootprof "INIT:Mount_START"
     write /sys/kernel/debug/tracing/trace_marker "B|1|Mount"
@@ -112,13 +97,6 @@ on fs
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
     write /sys/kernel/mm/swap/vma_ra_enabled false
-#ifdef VENDOR_EDIT
-#huacai.zhou@bsp.drv modify for setting zram size according to totalram size
-     chmod +x /vendor/bin/swap_enable.sh
-     start swap_enable_init
-#else
-     #swapon_all /vendor/fstab.enableswap
-#endif
 
 on fs
    mount iso9660 loop@/vendor/etc/iAmCdRom.iso /mnt/cd-rom ro
@@ -978,40 +956,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedplus"
     write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedplus"
 
-#service dpfd /vendor/bin/dpfd
-#	user root
-#	group system media
-
-#
-#  External Modme control related services
-#
-
-#
-#  Modem related services (Begin)
-#
-##Add by T.Zh for ppp daemon
-#service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
-#    user root
-#    disabled
-#    oneshot
-#
-##
-#
-#  Modem related services (End)
-#
-
-#add for power-off alarm
-#service poad /vendor/bin/poad
-#    class main
-#    user system
-#    group system
-#    oneshot
-
-#service BGW /vendor/xbin/BGW
-#	user system
-#	group gps system radio
-#	class main
-
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
     write /sys/devices/platform/battery_meter/FG_daemon_disable 1
@@ -1030,15 +974,6 @@ on property:persist.vendor.mediatek.fg.log.enable=1
     write /sys/bus/platform/devices/battery/FG_daemon_log_level 7
     write /proc/sys/kernel/printk 8
 
-# add meta_tst for ATM
-service meta_tst /vendor/bin/meta_tst
-    class main
-    user system
-    group radio gps system wifi audio bluetooth media
-    capabilities NET_RAW NET_ADMIN
-    disabled
-    oneshot
-
 # start meta_tst for ATM
 on property:sys.boot_completed=1 && property:ro.boot.atm=enable
     start meta_tst
@@ -1046,17 +981,3 @@ on property:sys.boot_completed=1 && property:ro.boot.atm=enable
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
-
-# FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
-
-# VSIM service (vendor OSI)
-service osi /system/bin/osi
-    class main
-    user root
-    disabled
-    oneshot
-    #seclabel u:r:osi:s0
-
-

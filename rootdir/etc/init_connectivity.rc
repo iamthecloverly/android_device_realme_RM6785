@@ -8,8 +8,6 @@ on post-fs-data
     mkdir /data/vendor/stp_dump 0755 system system
     mkdir /data/vendor/connsyslog 0755 system system
 
-on boot
-
 # WMT
 service wmt_loader /vendor/bin/wmt_loader
     class early_hal
@@ -54,8 +52,3 @@ service stp_dump /vendor/bin/stp_dump3
     group system sdcard_rw misc
     class core
     disabled
-
-service wmt_check_patch /system/bin/wmt_check_patch
-    user system
-    group system
-    class late_start
