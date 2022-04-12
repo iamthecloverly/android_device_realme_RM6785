@@ -42,9 +42,6 @@ function blob_fixup {
         product/etc/permissions/com.android.hotwordenrollment.common.util.xml)
             sed -i 's/my_product/product/' "$2"
             ;;
-        vendor/etc/init/hw/*.rc)
-            sed -i 's ${ro.vendor.rc} /vendor/etc/init/hw/ g' "$2"
-            ;;
         vendor/lib*/libudf.so)
             "$PATCHELF" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "$2"
             ;;

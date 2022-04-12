@@ -11,6 +11,55 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "etc/init.connectivity.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init_connectivity.rc",
+    src: "etc/init_connectivity.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "etc/init.modem.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6785.rc",
+    src: "etc/init.mt6785.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6785.usb.rc",
+    src: "etc/init.mt6785.usb.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "etc/init.project.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.sensor_1_0.rc",
+    src: "etc/init.sensor_1_0.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.target.rc",
     src: "etc/init.target.rc",
     relative_install_path: "init",
@@ -18,8 +67,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "ueventd.mtk.rc",
+    src: "etc/ueventd.rc",
+    filename_from_src: true,
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "ueventd.oplus.rc",
-    filename: "ueventd.rc",
     src: "etc/ueventd.oplus.rc",
+    filename: "ueventd.rc",
     device_specific: true,
 }

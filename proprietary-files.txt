@@ -2550,14 +2550,7 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 -priv-app/ImsService/ImsService.apk|502dfc9837f5b426536e9a61712a424832e0042c
 
 # Rootdir
-vendor/etc/init/hw/init.modem.rc
-vendor/etc/init/hw/init.mt6785.rc
-vendor/etc/init/hw/init.mt6785.usb.rc
-vendor/etc/init/hw/init.project.rc
-vendor/etc/init/hw/init.connectivity.rc
 vendor/etc/init/bootperf.rc
-vendor/etc/init/init_connectivity.rc
--vendor/ueventd.rc:vendor/etc/ueventd.rc;MODULE=ueventd.mtk.rc
 
 # Seccomp
 vendor/etc/seccomp_policy/mediacodec.policy
@@ -2569,7 +2562,6 @@ vendor/etc/seccomp_policy/mediaswcodec.policy
 -odm/lib64/sensors.virtual.so
 -vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
 vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
-vendor/etc/init/hw/init.sensor_1_0.rc
 vendor/etc/sensors/hals.conf
 -vendor/lib/libakm.so
 -vendor/lib/libhwm.so
