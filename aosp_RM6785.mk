@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RM6785/device.mk)
 
-# Inherit some common Project Elixir stuff.
+# Inherit some common PixelPlusUI stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
@@ -41,8 +41,8 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # PixelPlusUI OFFICIAL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.elixir.maintainer=SriBalaji(TheCloverly)
-    org.elixir.device=Realme RM6785
+    ro.pixelplusui.maintainer=SriBalaji(TheCloverly)
+    org.pixelplusui.device=Realme RM6785
 
 BUILD_FINGERPRINT := "realme/RMX2001/RMX2001L1:10/QP1A.190711.020/1594211000:user/release-keys"
 
