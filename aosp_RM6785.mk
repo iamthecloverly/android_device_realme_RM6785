@@ -39,7 +39,7 @@ TARGET_INCLUDE_STOCK_ACORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
-# PixelPlusUI OFFICIAL
+# ProjectElixir OFFICIAL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.elixir.maintainer=SriBalaji(TheCloverly)
     org.elixir.device=Realme RM6785
