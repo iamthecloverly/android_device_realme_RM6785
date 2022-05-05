@@ -1,2 +1,0 @@
-allow mtk_hal_power proc_tp:dir search;
-allow mtk_hal_power proc_tp:file w_file_perms;
