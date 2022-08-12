@@ -122,6 +122,9 @@ BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 6975127552 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
 BOARD_MAIN_PARTITION_LIST := system product vendor odm system_ext
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
