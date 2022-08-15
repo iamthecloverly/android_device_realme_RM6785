@@ -304,7 +304,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V1-ndk_platform.vendor
+    android.hardware.vibrator-service.RM6785
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
