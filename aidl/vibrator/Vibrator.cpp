@@ -5,6 +5,8 @@
  */
 
 #include <fstream>
+#include <thread>
+#include <android-base/logging.h>
 
 #include "Vibrator.h"
 
@@ -45,6 +47,18 @@ ndk::ScopedAStatus Vibrator::off() {
 
 ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs, const std::shared_ptr<IVibratorCallback>& callback) {
     ndk::ScopedAStatus status = activate(timeoutMs);
+
+    if (callback != nullptr) {
+        std::thread([=] {
+            LOG(DEBUG) << "Starting on on another thread";
+            usleep(timeoutMs * 1000);
+            LOG(DEBUG) << "Notifying on complete";
+            if (!callback->onComplete().isOk()) {
+                LOG(ERROR) << "Failed to call onComplete";
+            }
+        }).detach();
+    }
+
     return status;
 }
 
@@ -90,6 +104,15 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength, con
     }
 
     status = activate(timeoutMs);
+
+    if (callback != nullptr) {
+        std::thread([=] {
+            LOG(DEBUG) << "Starting perform on another thread";
+            usleep(timeoutMs * 1000);
+            LOG(DEBUG) << "Notifying perform complete";
+            callback->onComplete();
+        }).detach();
+    }
 
     *_aidl_return = timeoutMs;
     return status;
