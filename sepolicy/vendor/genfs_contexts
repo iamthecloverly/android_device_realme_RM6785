@@ -1,4 +1,5 @@
 genfscon sysfs /devices/platform/fpc_interrupt u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /kernel/thunderquake_engine/level u:object_r:sysfs_vibrator:s0
 genfscon proc  /touchpanel u:object_r:proc_tp:s0
 genfscon proc  /fp_id u:object_r:proc_fingerprint:s0
 genfscon proc  /fastchg_fw_update u:object_r:proc_fastchg_fw:s0
