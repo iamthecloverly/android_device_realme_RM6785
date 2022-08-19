@@ -150,10 +150,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
-# Textclassifier
-PRODUCT_PACKAGES += \
-    libtextclassifier_hash.vendor
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
@@ -172,10 +168,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     FrameworksOverlayRMX2151 \
     FrameworksOverlayRMX2161
-
-# Properties
-include $(LOCAL_PATH)/vendor_prop.mk
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # RRO (Runtime Resource Overlay)
 PRODUCT_ENFORCE_RRO_TARGETS += *
@@ -235,7 +227,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
 
 # Properties
--include $(LOCAL_PATH)/properties.mk
+include $(LOCAL_PATH)/vendor_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Radio
@@ -244,15 +236,15 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.mt6785.rc
-
 # RcsService
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
+
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt6785.rc
 
 # Secure element
 PRODUCT_PACKAGES += \
@@ -284,14 +276,18 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libshim_vtservice
 
-# Touch
+# Textclassifier
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.RM6785
+    libtextclassifier_hash.vendor
 
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@2.0.vendor
+
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.RM6785
 
 # Trust HAL
 PRODUCT_PACKAGES += \
