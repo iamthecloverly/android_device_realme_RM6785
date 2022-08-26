@@ -255,4 +255,5 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.log.tag.WpfaShmAccessController=$(VENDOR_LOG_LEVEL_I) \
     persist.log.tag.WpfaShmReadMsgHandler=$(VENDOR_LOG_LEVEL_I) \
     persist.log.tag.WpfaShmSynchronizer=$(VENDOR_LOG_LEVEL_I) \
-    persist.log.tag.WpfaShmWriteMsgHandler=$(VENDOR_LOG_LEVEL_I)
+    persist.log.tag.WpfaShmWriteMsgHandler=$(VENDOR_LOG_LEVEL_I) \
+    persist.log.tag.gralloc4=$(VENDOR_LOG_LEVEL_I)
