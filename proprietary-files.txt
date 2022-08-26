@@ -2550,7 +2550,7 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # https://github.com/realme-mt6785-devs/ImsService
--priv-app/ImsService/ImsService.apk|45842d11f8eb8e4d9c023bed552e8f4e3b813802
+-priv-app/ImsService/ImsService.apk|502dfc9837f5b426536e9a61712a424832e0042c
 
 # Rootdir
 vendor/etc/init/hw/init.modem.rc
