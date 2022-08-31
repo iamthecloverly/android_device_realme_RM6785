@@ -1633,9 +1633,6 @@ vendor/etc/ncf_pack.ncf
 -vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 -vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
-# Charger
--bin/charger:bin/chargeonlymode|eeb5a0e80057cce782b4555389310e83a408ad37
-
 # DRM widevine
 -odm/lib/liboemcrypto.so
 -odm/lib64/liboemcrypto.so
