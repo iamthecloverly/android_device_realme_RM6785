@@ -2007,7 +2007,6 @@ odm/firmware/fastchg/19661/oplus_vooc_fw.bin
 odm/firmware/fastchg/20682/oplus_vooc_fw.bin
 
 # Wifi
-odm/etc/wifi/txpowerctrl.cfg
 -vendor/bin/hw/wpa_supplicant
 -vendor/bin/stp_dump3
 -vendor/bin/wfca
@@ -2036,5 +2035,3 @@ vendor/etc/wifi/wpa_supplicant_overlay.conf
 # Wifi (Firmware)
 vendor/firmware/WIFI_RAM_CODE_soc1_0_2a_1.bin
 vendor/firmware/WMT_SOC.cfg
-vendor/firmware/wifi_19661.cfg
-vendor/firmware/wifi_20682.cfg
