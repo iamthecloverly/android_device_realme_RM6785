@@ -14,8 +14,6 @@ on early-init
     # boot perf. tune
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp 0
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
 
 on init
     # Support legacy paths
@@ -86,12 +84,10 @@ on charger
 
 on fs
     write /proc/bootprof "INIT:Mount_START"
-    write /sys/kernel/debug/tracing/trace_marker "B|1|Mount"
     wait_for_prop hwservicemanager.ready "true"
     start vendor.boot-hal-1-1
     mount_all --early
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
-    write /sys/kernel/debug/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END"
     write /sys/block/zram0/comp_algorithm lz4
     write /proc/sys/vm/page-cluster 0
@@ -657,16 +653,6 @@ on post-fs-data
     chmod 660 /dev/alarm
     chown root system /dev/alarm
 
-    #EM of MT6360
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/reg_addr
-
 # End of adding by MTK drivers
 # -----------------------
 
@@ -709,8 +695,6 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     chown system system /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-    chown root   system /sys/kernel/debug/binder/transaction_log_enable
-    chown root   system /sys/kernel/debug/binder/perf_evalue
     chown system system /sys/devices/system/cpu/rq-stats/htasks_thresh
     chmod 0660 /sys/devices/system/cpu/rq-stats/htasks_thresh
     chown system system /sys/devices/system/cpu/rq-stats/avg_htasks_thresh
