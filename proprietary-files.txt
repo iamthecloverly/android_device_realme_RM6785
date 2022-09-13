@@ -2186,11 +2186,6 @@ vendor/etc/init/vendor.mediatek.hardware.keyinstall@1.0-service.rc
 -vendor/lib64/liburee_meta_drmkeyinstall.so
 -vendor/lib64/vendor.mediatek.hardware.keyinstall@1.0.so
 
-# Mediatek log
--vendor/bin/loghidlvendorservice
-vendor/etc/init/loghidlvendorservice.rc
--vendor/lib64/vendor.mediatek.hardware.log@1.0.so
-
 # Mediatek PQ
 -vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
