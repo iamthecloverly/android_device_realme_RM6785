@@ -2334,8 +2334,6 @@ vendor/etc/powercontable.xml|af748f636609898e59fbca07c705dc69f1a6c2e0
 vendor/etc/public.libraries.txt
 
 # Radio
--bin/vtservice
-etc/init/init.vtservice.rc
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
 -framework/mediatek-ims-base.jar
@@ -2345,30 +2343,10 @@ framework/mediatek-ims-legacy.jar
 -framework/mediatek-telecom-common.jar
 -framework/mediatek-telephony-base.jar
 -framework/mediatek-telephony-common.jar
--lib64/libmtkavenhancements.so
--lib64/libmtk_vt_wrapper.so
--lib64/libvcodec_capenc.so
--lib64/libvcodec_cap.so
--lib/libcomutils.so
--lib/libimsma_adapt.so
--lib/libimsma_rtp.so
--lib/libimsma.so
--lib/libimsma_socketwrapper.so
--lib/libmtkavenhancements.so
--lib/libmtk_vt_service.so
--lib/libmtk_vt_wrapper.so
--lib/libsignal.so
--lib/libsink.so
--lib/libsource.so
--lib/libvcodec_capenc.so
--lib/libvcodec_cap.so
--lib/libvt_avsync.so
 -odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 -odm/lib64/vendor.oplus.hardware.radio@1.0.so
 -odm/lib/vendor.oplus.hardware.appradio@1.0.so
 -odm/lib/vendor.oplus.hardware.radio@1.0.so
--system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE=vendor.mediatek.hardware.videotelephony@1.0.system_ext
--system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE=vendor.mediatek.hardware.videotelephony@1.0.system_ext
 -vendor/bin/bip
 -vendor/bin/ccci_fsd
 -vendor/bin/ccci_mdinit
@@ -2379,7 +2357,6 @@ framework/mediatek-ims-legacy.jar
 -vendor/bin/gsm0710muxd
 -vendor/bin/hw/mtkfusionrild
 -vendor/bin/hw/vendor.mediatek.hardware.mms@1.5-service
--vendor/bin/hw/vtservice_hidl
 -vendor/bin/ipsec_mon
 -vendor/bin/md_monitor
 -vendor/bin/md_monitor_ctrl
@@ -2416,7 +2393,6 @@ vendor/etc/init/init.volte_imsm_93.rc
 vendor/etc/init/init.volte_md_status.rc
 vendor/etc/init/init.volte_stack.rc
 vendor/etc/init/init.volte_ua.rc
-vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wod.rc
 vendor/etc/init/init.xcap.rc
 vendor/etc/init/ipsec_mon.rc
@@ -2454,7 +2430,6 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib64/hw/vendor.mediatek.hardware.mms@1.5-impl.so
--vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 -vendor/lib64/libcapctrl.so
 -vendor/lib64/libcares_naptr.so
 -vendor/lib64/libcarrierconfig.so
@@ -2500,9 +2475,7 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 -vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 -vendor/lib64/vendor.mediatek.hardware.pplagent@1.0.so
--vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 -vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so
--vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 -vendor/lib/libcapctrl.so
 -vendor/lib/libcares_naptr.so
 -vendor/lib/libcarrierconfig.so
@@ -2539,10 +2512,44 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 -vendor/lib/vendor.mediatek.hardware.mms@1.4.so
 -vendor/lib/vendor.mediatek.hardware.mms@1.5.so
 -vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
--vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 
-# https://github.com/realme-mt6785-devs/ImsService
+# ImsService (https://github.com/realme-mt6785-devs/ImsService)
 -priv-app/ImsService/ImsService.apk|502dfc9837f5b426536e9a61712a424832e0042c
+
+# VT (Video Telephony) - from RMX2151_11_F.01
+-bin/vtservice|75eeb851d490ea9bc20c182ffa2b0a76f871a32d
+etc/init/init.vtservice.rc|abcbc3ffc316b8f1cedffa949aac3b46670d64bc
+-lib/libmtk_vt_wrapper.so|f83f677349f369dbe52a310250b93bf66993652e
+-lib/libmtkavenhancements.so|675c10ceb669661fcd9fcb7f1f4001a641c4dbd0
+-lib/libmtkperf_client.so|94780076b9a39bffde43870d50ba306d6a89fd96
+-lib/libvcodec_cap.so|829cd1d4f0e73fbefd38e4818896f162f7e10472
+-lib/libvcodec_capenc.so|24d1236c6027f07b2a258410aa9a331d68c56112
+-lib/libvsim-adaptor-client.so|7bbcbe504de8b115b6bc5e0d7b16c62769885c6e
+-lib64/libcomutils.so|2c690f9b35b3d2ef0ec63223cded9eb2ba98655c
+-lib64/libimsma.so|e13d8087b6a5f83a40ee60c1f50d50ab0c9be044
+-lib64/libimsma_adapt.so|ea34a1a7fdfaa68e10a4811e1a93a7b51432de13
+-lib64/libimsma_rtp.so|436b6ac193501c0ce9538e97c45c2f67e78f5381
+-lib64/libimsma_socketwrapper.so|8287ea961714a9fb34f9661bba026014a392e199
+-lib64/libmtk_vt_service.so|aab169313bb8dffe44747c7bdbf5ebb33c75b91c
+-lib64/libmtk_vt_wrapper.so|63fff84c494281b02b362706ea9495aa12fbd0d1
+-lib64/libmtk_vt_wrapper.so|63fff84c494281b02b362706ea9495aa12fbd0d1
+-lib64/libmtkavenhancements.so|24237b8f7c835696d3147c66464316b1ec5e84ae
+-lib64/libmtkperf_client.so|e25e5af60b58f390ad46832e9dcfb9a298b62fec
+-lib64/libsignal.so|305fff9001375c02fb8c41967666eb51bb14d478
+-lib64/libsink.so|df2585e4acd91613e29e93bef6a25855d296bbb2
+-lib64/libsource.so|407a73931c1dbe8bd16ceca664099b5bd77e4769
+-lib64/libvcodec_cap.so|3d3a52317bd310c416343538ad926bec1255b8b0
+-lib64/libvcodec_capenc.so|af8696e84defd1b0b20b16ef9b664cc7c58d9d0d
+-lib64/libvsim-adaptor-client.so|fdcf8028addf9cf2b5b3f7edc5a3b42de1d025ea
+-lib64/libvt_avsync.so|ed7fdbc2e17d83aa6399c8b6eb8dfa7e32ecd25e
+-system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE=vendor.mediatek.hardware.videotelephony@1.0.system_ext|abd2d0eda09ac9a0d9e315dec5e6584a247117e9
+-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE=vendor.mediatek.hardware.videotelephony@1.0.system_ext|ea38843255d76296cd67d53be192472c42edcdaa
+-vendor/bin/hw/vtservice_hidl|9a91433ec044fd6d05e4c30e17495691648a49ba
+vendor/etc/init/init.vtservice_hidl.rc|f2e992214ed5bb99c2c2a135cf1f0996dba8a8a0
+-vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so|2327f38bdc7eb60e36aa8ff892667f3764c5e574
+-vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so|63c63b4bf1fa380678e8c7da86f44fd76cc8e870
+-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|099ec746d66f26eea9220465a2f6d0a3c2474666
+-vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so|1d071b1e06896e1cdf65077b8cf3f6568222b9be
 
 # Rootdir
 vendor/etc/init/bootperf.rc
