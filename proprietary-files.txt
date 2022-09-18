@@ -1028,7 +1028,6 @@ vendor/etc/ncf_pack.ncf
 -vendor/lib/libstface_fd_api.so
 -vendor/lib/libtflite_mtk.so
 -vendor/lib/libtflite_mtk_static_R.so
--vendor/lib/libudf.so
 -vendor/lib/ov02b10_mipi_raw_IdxMgr.so
 -vendor/lib/ov02b10_mipi_raw_tuning.so
 -vendor/lib/ov02b1b_mipi_mono_IdxMgr.so
@@ -1603,7 +1602,6 @@ vendor/etc/ncf_pack.ncf
 -vendor/lib64/libstface_fd_api.so
 -vendor/lib64/libtflite_mtk.so
 -vendor/lib64/libtflite_mtk_static_R.so
--vendor/lib64/libudf.so
 -vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 -vendor/lib64/ov02b10_mipi_raw_IdxMgr.so
 -vendor/lib64/ov02b10_mipi_raw_tuning.so
@@ -2663,6 +2661,9 @@ vendor/etc/init/init.thermalloadalgod.rc
 -vendor/lib64/hw/thermal.mt6785.so
 -vendor/lib64/libmtcloader.so
 
+# UDF (Userspace debugging framework) - from RMX2151_11_F.01
+-vendor/lib64/libudf.so|66324571c3f69057b250bce3b0d58c386da0c25b
+
 # USB
 -vendor/bin/hw/android.hardware.usb@1.1-service-mediatek
 vendor/etc/default_pd_calibration.bin
@@ -2670,10 +2671,8 @@ vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 
 # VNDK - from prebuilts/vndk
 -vendor/lib/libmedia_helper-v30.so|e5df6ca7ff7eebb0dbe2c42ff8a8d598326a0553
--vendor/lib/libunwindstack-v30.so|a4542799a5c9e091f29b613d02daecfcdf395b36
 -vendor/lib/libutils-v30.so|aecfbbdaf1dbfdf4694e33e18d71a70b708480d0
 -vendor/lib64/libmedia_helper-v30.so|42261baf01b770fbbd845df8b51bac811cd62683
--vendor/lib64/libunwindstack-v30.so|d309107e725a410e7ad05561a04359065e7c230e
 -vendor/lib64/libutils-v30.so|cb220c1647d358cc7252e27effd7d3fccdb062a5
 -vendor/lib64/libutils-v32.so|79e694bea942225a64e768468000dce3a0e44b22
 

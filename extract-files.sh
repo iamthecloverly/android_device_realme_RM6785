@@ -39,9 +39,6 @@ function blob_fixup {
         product/etc/permissions/com.android.hotwordenrollment.common.util.xml)
             sed -i 's/my_product/product/' "$2"
             ;;
-        vendor/lib*/libudf.so)
-            "$PATCHELF" --replace-needed "libunwindstack.so" "libunwindstack-v30.so" "$2"
-            ;;
         vendor/lib*/libmtkcam_stdutils.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v30.so" "$2"
             ;;
