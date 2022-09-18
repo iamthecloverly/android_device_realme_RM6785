@@ -318,6 +318,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.RM6785
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libmedia_helper-v30 \
+    libutils-v32 \
+    libutils-v30
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlayRM6785 \

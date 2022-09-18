@@ -2669,13 +2669,6 @@ vendor/etc/init/init.thermalloadalgod.rc
 vendor/etc/default_pd_calibration.bin
 vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 
-# VNDK - from prebuilts/vndk
--vendor/lib/libmedia_helper-v30.so|e5df6ca7ff7eebb0dbe2c42ff8a8d598326a0553
--vendor/lib/libutils-v30.so|aecfbbdaf1dbfdf4694e33e18d71a70b708480d0
--vendor/lib64/libmedia_helper-v30.so|42261baf01b770fbbd845df8b51bac811cd62683
--vendor/lib64/libutils-v30.so|cb220c1647d358cc7252e27effd7d3fccdb062a5
--vendor/lib64/libutils-v32.so|79e694bea942225a64e768468000dce3a0e44b22
-
 # Wifi
 odm/etc/wifi/txpowerctrl.cfg
 -vendor/bin/hw/wpa_supplicant

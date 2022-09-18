@@ -39,8 +39,15 @@ function blob_fixup {
         product/etc/permissions/com.android.hotwordenrollment.common.util.xml)
             sed -i 's/my_product/product/' "$2"
             ;;
-        vendor/lib*/libmtkcam_stdutils.so)
-            "$PATCHELF" --replace-needed "libutils.so" "libutils-v30.so" "$2"
+        vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc)
+            sed -i '/vts/Q' "$2"
+            ;;
+        vendor/lib64/libmtkcam_featurepolicy.so)
+            # evaluateCaptureConfiguration()
+            sed -i "s/\x34\xE8\x87\x40\xB9/\x34\x28\x02\x80\x52/" "$2"
+            ;;
+        vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
+            "$PATCHELF" --replace-needed "android.hardware.power-V2-ndk_platform.so" "android.hardware.power-V2-ndk.so" "$2"
             ;;
         vendor/lib64/hw/dfps.mt6785.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
@@ -48,21 +55,14 @@ function blob_fixup {
         vendor/lib64/hw/vendor.mediatek.hardware.pq@2.6-impl.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             ;;
-        vendor/lib*/hw/audio.primary.mt6785.so)
+        vendor/lib/hw/audio.primary.mt6785.so)
             "$PATCHELF" --replace-needed "libmedia_helper.so" "libmedia_helper-v30.so" "$2"
             ;;
+        vendor/lib64/libmtkcam_stdutils.so)
+            "$PATCHELF" --replace-needed "libutils.so" "libutils-v30.so" "$2"
+            ;;
         vendor/lib64/libwifi-hal-mtk.so)
-            "$PATCHELF" --set-soname libwifi-hal-mtk.so "$2"
-            ;;
-        vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
-            "$PATCHELF" --replace-needed android.hardware.power-V2-ndk_platform.so android.hardware.power-V2-ndk.so "$2"
-            ;;
-        vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc)
-            sed -i '/vts/Q' "$2"
-            ;;
-        vendor/lib64/libmtkcam_featurepolicy.so)
-            # evaluateCaptureConfiguration()
-            sed -i "s/\x34\xE8\x87\x40\xB9/\x34\x28\x02\x80\x52/" "$2"
+            "$PATCHELF" --set-soname "libwifi-hal-mtk.so" "$2"
             ;;
     esac
 }
