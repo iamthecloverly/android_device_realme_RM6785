@@ -5,9 +5,9 @@
 
 prebuilt_etc {
     name: "fstab.mt6785",
-    required: ["fstab.ramdisk"],
     src: "etc/fstab.mt6785",
     vendor: true,
+    ramdisk_available: true,
 }
 
 prebuilt_etc {
@@ -50,6 +50,13 @@ prebuilt_etc {
     src: "etc/init.project.rc",
     relative_install_path: "init/hw",
     vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.mt6785.rc",
+    src: "etc/init.recovery.mt6785.rc",
+    sub_dir: "init",
+    recovery: true,
 }
 
 prebuilt_etc {

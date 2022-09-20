@@ -127,6 +127,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6785 \
+    fstab.mt6785.ramdisk \
     init.connectivity.rc \
     init_connectivity.rc \
     init.modem.rc \
