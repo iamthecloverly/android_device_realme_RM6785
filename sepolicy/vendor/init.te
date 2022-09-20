@@ -1,0 +1,1 @@
+allow init sysfs_otg_switch:file rw_file_perms;
