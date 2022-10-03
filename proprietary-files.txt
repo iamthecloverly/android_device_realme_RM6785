@@ -13,7 +13,6 @@
 -vendor/lib/hw/audio.usb.mt6785.so
 -vendor/lib/hw/sound_trigger.primary.mt6785.so
 -vendor/lib/libalsautils.so:vendor/lib/libalsautils-v30.so
--vendor/lib/soundfx/libaudiopreprocessing_mtk.so
 -vendor/lib/libMtkSpeechEnh.so
 -vendor/lib/lib_iir.so
 -vendor/lib/lib_speech_enh.so
@@ -53,7 +52,6 @@
 -vendor/lib/libvowp23_sid_training_alexa.vendor.so
 -vendor/lib/libvowp25testing_alexa.vendor.so
 -vendor/lib/libvowp2training_alexa.vendor.so
--vendor/lib/libwebrtc_audio_preprocessing.so
 -vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 
 # Audio (Configs)
