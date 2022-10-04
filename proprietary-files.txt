@@ -1577,14 +1577,8 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
 # Power - from RMX2151_11_F.01
--vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so|f350c31eb955fc3e20f330454098cebc415699ce
--vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so|249c6ea84b1ccfc5f9ff3a001ef484f236dcd1a5
--vendor/lib/vendor.mediatek.hardware.mtkpower@1.2.so|aa65a5f207947403b300779e947f642e66bd133d
 -vendor/lib/vendor.mediatek.hardware.power@1.1.so|d0c5a57a7a864791d5278551f7b5d61d9ad127d8
 -vendor/lib/vendor.mediatek.hardware.power@2.0.so|455d3022046a7acba0401e87ae1b3c6527531cc1
--vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so|6e42e6b98d765ca7b3d494e8ff4b6749fb4d4161
--vendor/lib64/vendor.mediatek.hardware.mtkpower@1.1.so|9e4c12340077570b34f76749d43934e3977553bf
--vendor/lib64/vendor.mediatek.hardware.mtkpower@1.2.so|9f74a72428b077d9c1016805727ed169eef7e593
 -vendor/lib64/vendor.mediatek.hardware.power@1.1.so|3cbcf441cec0885923f014d18bdb074a4317b63e
 -vendor/lib64/vendor.mediatek.hardware.power@2.0.so|0d0053655bd4cf327d3af7a355bfee4da764c1c4
 
