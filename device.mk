@@ -234,6 +234,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.RM6785-libperfmgr \
     android.hardware.power@1.3.vendor:64
 
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
+    libmtkperf_client
+
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true

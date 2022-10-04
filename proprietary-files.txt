@@ -1577,13 +1577,11 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -odm/lib64/vendor.oplus.hardware.orms@1.0.so
 
 # Power - from RMX2151_11_F.01
--vendor/lib/libmtkperf_client_vendor.so|a9ed1c2fc43418acff7649e0c473cc7e6181d794
 -vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so|f350c31eb955fc3e20f330454098cebc415699ce
 -vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so|249c6ea84b1ccfc5f9ff3a001ef484f236dcd1a5
 -vendor/lib/vendor.mediatek.hardware.mtkpower@1.2.so|aa65a5f207947403b300779e947f642e66bd133d
 -vendor/lib/vendor.mediatek.hardware.power@1.1.so|d0c5a57a7a864791d5278551f7b5d61d9ad127d8
 -vendor/lib/vendor.mediatek.hardware.power@2.0.so|455d3022046a7acba0401e87ae1b3c6527531cc1
--vendor/lib64/libmtkperf_client_vendor.so|fd4dc0543991f1d69845b6db7872067eeca687a9
 -vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so|6e42e6b98d765ca7b3d494e8ff4b6749fb4d4161
 -vendor/lib64/vendor.mediatek.hardware.mtkpower@1.1.so|9e4c12340077570b34f76749d43934e3977553bf
 -vendor/lib64/vendor.mediatek.hardware.mtkpower@1.2.so|9f74a72428b077d9c1016805727ed169eef7e593
@@ -1808,7 +1806,6 @@ vendor/etc/vintf/manifest/oplus_radio_device_manifest.xml
 etc/init/init.vtservice.rc|abcbc3ffc316b8f1cedffa949aac3b46670d64bc
 -lib/libmtk_vt_wrapper.so|f83f677349f369dbe52a310250b93bf66993652e
 -lib/libmtkavenhancements.so|675c10ceb669661fcd9fcb7f1f4001a641c4dbd0
--lib/libmtkperf_client.so|94780076b9a39bffde43870d50ba306d6a89fd96
 -lib/libvcodec_cap.so|829cd1d4f0e73fbefd38e4818896f162f7e10472
 -lib/libvcodec_capenc.so|24d1236c6027f07b2a258410aa9a331d68c56112
 -lib/libvsim-adaptor-client.so|7bbcbe504de8b115b6bc5e0d7b16c62769885c6e
@@ -1820,7 +1817,6 @@ etc/init/init.vtservice.rc|abcbc3ffc316b8f1cedffa949aac3b46670d64bc
 -lib64/libmtk_vt_service.so|aab169313bb8dffe44747c7bdbf5ebb33c75b91c
 -lib64/libmtk_vt_wrapper.so|63fff84c494281b02b362706ea9495aa12fbd0d1
 -lib64/libmtkavenhancements.so|24237b8f7c835696d3147c66464316b1ec5e84ae
--lib64/libmtkperf_client.so|e25e5af60b58f390ad46832e9dcfb9a298b62fec
 -lib64/libsignal.so|305fff9001375c02fb8c41967666eb51bb14d478
 -lib64/libsink.so|df2585e4acd91613e29e93bef6a25855d296bbb2
 -lib64/libsource.so|407a73931c1dbe8bd16ceca664099b5bd77e4769
