@@ -231,12 +231,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-mediatek:64 \
-    android.hardware.power-V1-ndk_platform.vendor:64 \
+    android.hardware.power-service.example \
     android.hardware.power@1.3.vendor:64
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
