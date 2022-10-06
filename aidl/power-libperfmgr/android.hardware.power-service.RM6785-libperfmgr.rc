@@ -30,3 +30,6 @@ on property:ro.debuggable=1 && property:vendor.powerhal.config.debug=*
 on property:persist.vendor.powerhal.config.debug=*
     setprop vendor.powerhal.config.debug ${persist.vendor.powerhal.config.debug}
 
+on property:sys.boot_completed=1
+    # Initialize powerHAL when boot is completed
+    setprop vendor.powerhal.init 1
