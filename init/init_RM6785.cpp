@@ -131,6 +131,7 @@ std::tuple<std::string, std::string> get_device() {
 }
 
 void vendor_load_properties() {
+#ifndef __ANDROID_RECOVERY__
     auto [device, model] = get_device();
 
     set_ro_build_prop("device", device);
@@ -150,4 +151,5 @@ void vendor_load_properties() {
     if (nfc_variant()) {
         property_override("ro.boot.product.hardware.sku", "nfc");
     }
+#endif
 }
