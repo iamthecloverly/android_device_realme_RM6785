@@ -21,15 +21,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/RM6785/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ProjectElixir stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_RM6785
+PRODUCT_NAME := aosp_RM6785
 PRODUCT_DEVICE := RM6785
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RM6785
 PRODUCT_MANUFACTURER := realme
+
+ELIXIR_MAINTAINER := SriBalaji(TheCloverly)
+ELIXIR_BUILD_TYPE := OFFICIAL
+IS_PHONE := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ACORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	    org.elixir.device=Realme RM6785
 
 BUILD_FINGERPRINT := "realme/RMX2001/RMX2001L1:10/QP1A.190711.020/1594211000:user/release-keys"
 
