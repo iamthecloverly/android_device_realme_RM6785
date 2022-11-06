@@ -11,3 +11,7 @@ git clone https://github.com/realme-mt6785-devs/proprietary_vendor_realme.git ve
 git clone https://github.com/realme-mt6785-devs/android_kernel_realme_mt6785.git kernel/realme/mt6785
 git clone https://github.com/realme-mt6785-devs/proprietary_vendor_realme-firmware realme/realme-firmware
 git clone https://github.com/realme-mt6785-devs/android_device_mediatek_sepolicy.git device/mediatek/sepolicy
+
+#patch for brightness slider 
+cd frameworks/base && wget https://raw.githubusercontent.com/sarthakroy2002/random-stuff/main/Patches/Fix-brightness-slider-curve-for-some-devices-a12l.patch
+patch -p1 < *.patch && cd -
