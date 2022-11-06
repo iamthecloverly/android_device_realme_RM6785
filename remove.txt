@@ -1,0 +1,6 @@
+device/realme/RM6785
+vendor/realme
+kernel/realme/mt6785
+realme/realme-firmware
+device/mediatek/sepolicy
+frameworks/base
