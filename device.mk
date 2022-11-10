@@ -102,6 +102,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service
 
+PRODUCT_PACKAGES += \
+    libui-v32
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.RM6785 \
