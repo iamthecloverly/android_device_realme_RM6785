@@ -1446,7 +1446,6 @@ vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/mtk_omx_core.cfg
 -vendor/lib/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-impl.so
--vendor/lib/vndk/libstagefright_omx.so;MODULE=libstagefright_omx.mtk
 -vendor/lib/AVCSecureVdecCA.so
 -vendor/lib/VP9SecureVdecCA.so
 -vendor/lib/libHEVCdec_sa.ca7.android.so
