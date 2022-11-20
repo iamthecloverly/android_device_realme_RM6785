@@ -1,9 +1,9 @@
-type proc_tp, fs_type, proc_type;
-type proc_fingerprint, fs_type, proc_type;
 type proc_fastchg_fw, fs_type, proc_type;
+type proc_fingerprint, fs_type, proc_type;
 type proc_sensor_feature, fs_type, proc_type;
+type proc_tp, fs_type, proc_type;
 type sysfs_fingerprint, fs_type, sysfs_type;
-type sysfs_sia81xx, fs_type, sysfs_type;
-type vendor_persist_camera_file, file_type;
-type sysfs_virtual_sensor, fs_type, sysfs_type;
 type sysfs_otg_switch, fs_type, sysfs_type;
+type sysfs_sia81xx, fs_type, sysfs_type;
+type sysfs_virtual_sensor, fs_type, sysfs_type;
+type vendor_persist_camera_file, file_type;

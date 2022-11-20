@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 Android Open Source Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service-mediatek \
+    android.hardware.audio.service.RM6785 \
     android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.bluetooth.audio-impl \
@@ -102,9 +102,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service
 
-PRODUCT_PACKAGES += \
-    libui-v32
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.RM6785 \
@@ -128,7 +125,7 @@ PRODUCT_PACKAGES += \
     init.mt6785.usb.rc \
     init.project.rc \
     init.sensor_1_0.rc \
-    init.target.rc \
+    init.RM6785.rc \
     ueventd.mtk.rc
 
 # Kernel
@@ -325,7 +322,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmedia_helper-v30 \
     libutils-v32 \
-    libutils-v30
+    libutils-v30 \
+    libui-v32
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
