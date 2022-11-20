@@ -67,8 +67,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.target.rc",
-    src: "etc/init.target.rc",
+    name: "init.RM6785.rc",
+    src: "etc/init.RM6785.rc",
     relative_install_path: "init",
     vendor: true,
 }

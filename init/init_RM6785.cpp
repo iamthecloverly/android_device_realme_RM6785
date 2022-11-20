@@ -1,3 +1,9 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
 #include <fstream>
 #include <tuple>
 #include <android-base/logging.h>
@@ -118,7 +124,7 @@ std::tuple<std::string, std::string> get_device() {
         case 143:
             device = "RMX2161L1";
             model = "RMX2161";
-        break;
+            break;
         case 145:
         case 147:
             device = "RMX2163L1";
