@@ -167,9 +167,6 @@ odm/etc/audio/test_path/mixer_paths.xml
 odm/etc/audio/file112.wav
 odm/etc/audio/oplus_audio_features.xml
 odm/etc/audio/spk.wav
-odm/etc/dirac/diracmobile.config
-odm/etc/dirac/diracvdd.bin
-odm/etc/audio_effects.xml
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
 vendor/etc/audio_param/BtInfo_ParamUnitDesc.xml
@@ -270,21 +267,15 @@ vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/etc/aurisys_param/Speech_AudioParam.xml
 vendor/etc/init/audiocmdservice_atci.rc
-vendor/etc/permissions/com.mediatek.hardware.vow.xml
-vendor/etc/permissions/com.mediatek.hardware.vow_dsp.xml
 vendor/etc/test_path/common/mixer_paths.xml
-vendor/etc/test_path/oppo6779_19537/mixer_paths.xml
 vendor/etc/audio_device.xml
 vendor/etc/audio_em.xml
 vendor/etc/audio_policy.conf
-vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
 vendor/etc/audio_policy_volumes.xml
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_hifi3.xml
-vendor/etc/default_volume_tables.xml
 vendor/etc/file112.wav
 vendor/etc/spk.wav
-vendor/etc/usb_audio_policy_configuration.xml
 
 # Audio (Firmware)
 odm/firmware/aw87339/aw87339_abrcv.bin
@@ -323,8 +314,6 @@ vendor/etc/init/init.bt_drv.rc
 vendor/firmware/BT_FW.cfg
 
 # Camera
--odm/lib64/hw/vendor.oplus.hardware.camera.slogan@1.0-impl.so
--odm/lib64/vendor.oplus.hardware.camera.slogan@1.0.so
 -vendor/bin/hw/camerahalserver
 vendor/etc/init/camerahalserver.rc
 -vendor/lib/libmtk_drvb.so
@@ -1423,14 +1412,6 @@ vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 -vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Media (Codecs)
--odm/lib/libavcodec.so
--odm/lib/libavformat.so
--odm/lib/libavutil.so
--odm/lib/libdav1d.so.4
--odm/lib/libffmpeg_omx.so
--odm/lib/libffmpeg_utils.so
--odm/lib/libswresample.so
--odm/lib/libswscale.so
 -vendor/bin/hw/vendor.mediatek.hardware.mtkcodecservice@1.1-service
 -vendor/bin/jpegtool
 -vendor/bin/vpud
@@ -1531,10 +1512,6 @@ odm/etc/init/init.pn8x.nfc.rc
 odm/etc/init/init.pn8x.se.rc
 odm/etc/nfc/libnfc-nxp.conf_19661:vendor/etc/libnfc-nxp.conf
 odm/etc/libnfc-nxp-pnscr.conf
--odm/lib/libpn553_fw.so
--odm/lib/libpn557_fw.so
--odm/lib/libpnscr2.so
--odm/lib/libsn100u_fw.so
 -odm/lib64/libpnscr2.so
 -vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
@@ -1566,9 +1543,6 @@ vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc
 -vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Oplus
--odm/lib/libormshalclient.so
--odm/lib/vendor.oplus.hardware.commondcs@1.0.so
--odm/lib/vendor.oplus.hardware.orms@1.0.so
 -odm/lib64/libormshalclient.so
 -odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 -odm/lib64/vendor.oplus.hardware.orms@1.0.so
@@ -1783,8 +1757,6 @@ framework/mediatek-ims-legacy.jar
 -priv-app/ImsService/ImsService.apk|8d0592bc086e30bf8a84c3daa43cadd65c77ba54
 
 # Radio (Oplus)
--odm/lib/vendor.oplus.hardware.appradio@1.0.so
--odm/lib/vendor.oplus.hardware.radio@1.0.so
 -odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 -odm/lib64/vendor.oplus.hardware.radio@1.0.so
 vendor/etc/vintf/manifest/oplus_appradio_device_manifest.xml
