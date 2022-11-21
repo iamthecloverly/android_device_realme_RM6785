@@ -277,7 +277,6 @@ vendor/etc/permissions/com.mediatek.hardware.vow_dsp.xml
 vendor/etc/test_path/common/mixer_paths.xml
 vendor/etc/test_path/oppo6779_19537/mixer_paths.xml
 vendor/etc/audio_device.xml
-vendor/etc/audio_effects.xml
 vendor/etc/audio_em.xml
 vendor/etc/audio_policy.conf
 vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml
