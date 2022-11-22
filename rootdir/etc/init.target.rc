@@ -1,3 +1,7 @@
+on init
+    # Update fastcharge firmware
+    write /proc/fastchg_fw_update 1
+
 on fs
     mount_all /vendor/etc/fstab.mt6785 --early
     mount_all /vendor/etc/fstab.mt6785 --late
@@ -33,9 +37,6 @@ on property:sys.boot_completed=1
 
     # Enable oppo touchpanel direction
     write /proc/touchpanel/oplus_tp_direction 1
-
-    # Update fastcharge firmware
-    write /proc/fastchg_fw_update 1
 
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
