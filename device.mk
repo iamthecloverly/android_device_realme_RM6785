@@ -52,6 +52,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.6.vendor:64 \
     android.hardware.camera.provider@2.6.vendor:64
 
+PRODUCT_PACKAGES += \
+    libshim_camera_metadata
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
