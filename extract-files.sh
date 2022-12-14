@@ -54,8 +54,17 @@ function blob_fixup {
         vendor/lib64/libwifi-hal-mtk.so)
             "$PATCHELF" --set-soname "libwifi-hal-mtk.so" "$2"
             ;;
+        vendor/lib/libMtkOmxCore.so)
+            sed -i "s/mtk.vendor.omx.core.log/ro.vendor.mtk.omx.log\x00\x00/" "$2"
+            ;;
         vendor/lib/libMtkOmxVdecEx.so)
             "$PATCHELF" --replace-needed "libui.so" "libui-v32.so" "$2"
+            sed -i "s/ro.mtk_crossmount_support/ro.vendor.mtk_crossmount\x00/" "$2"
+            sed -i "s/ro.mtk_deinterlace_support/ro.vendor.mtk_deinterlace\x00/" "$2"
+            ;;
+        vendor/lib/libaudio_param_parser-vnd.so)
+            sed -i "s/\x00audio.tuning.def_path/\x00ro.vendor.tuning_path/" "$2"
+            sed -i "s/\x20audio.tuning.def_path/\x20ro.vendor.tuning_path/" "$2"
             ;;
     esac
 }

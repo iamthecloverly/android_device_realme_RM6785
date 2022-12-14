@@ -1,5 +1,5 @@
 # Audio
-audio.tuning.def_path                       u:object_r:vendor_audio_tunning_prop:s0
+ro.vendor.tuning_path                       u:object_r:vendor_audio_tunning_prop:s0
 persist.vendor.audio.tuning.def_path        u:object_r:vendor_audio_tunning_prop:s0
 
 # Fingerprint
