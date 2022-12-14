@@ -24,7 +24,7 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service.RM6785 \
+    android.hardware.audio.service \
     android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.bluetooth.audio-impl \
