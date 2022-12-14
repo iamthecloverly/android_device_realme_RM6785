@@ -1,0 +1,21 @@
+hal_client_domain(hal_audio_default, hal_power)
+
+unix_socket_connect(hal_audio_default, property, init)
+
+set_prop(hal_audio_default, vendor_audio_tunning_prop)
+set_prop(hal_audio_default, vendor_mtk_audiohal_prop)
+
+allow hal_audio_default adsp_device:chr_file rw_file_perms;
+allow hal_audio_default audio_ipi_device:chr_file rw_file_perms;
+allow hal_audio_default ccci_aud_device:chr_file rw_file_perms;
+allow hal_audio_default ccci_device:chr_file rw_file_perms;
+allow hal_audio_default ebc_device:chr_file rw_file_perms;
+allow hal_audio_default vow_device:chr_file rw_file_perms;
+allow hal_audio_default mnt_vendor_file:dir search;
+allow hal_audio_default mtk_audiohal_data_file:dir create_dir_perms;
+allow hal_audio_default mtk_audiohal_data_file:file create_file_perms;
+allow hal_audio_default sysfs_boot_mode:file r_file_perms;
+allow hal_audio_default sysfs_sia81xx:file r_file_perms;
+allow hal_audio_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+dontaudit hal_audio_default system_prop:file r_file_perms;
