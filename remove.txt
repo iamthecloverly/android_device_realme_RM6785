@@ -4,3 +4,4 @@ kernel/realme/mt6785
 realme/realme-firmware
 device/mediatek/sepolicy
 frameworks/base
+external/faceunlock
